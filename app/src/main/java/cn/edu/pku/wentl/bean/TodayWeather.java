@@ -112,6 +112,7 @@ public class TodayWeather {
 
     public void setType(String type) {
         this.type = type;
+
     }
 
     @Override
