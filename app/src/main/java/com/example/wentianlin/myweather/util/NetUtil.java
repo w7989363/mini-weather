@@ -1,4 +1,4 @@
-package cn.edu.pku.wentl.util;
+package com.example.wentianlin.myweather.util;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;

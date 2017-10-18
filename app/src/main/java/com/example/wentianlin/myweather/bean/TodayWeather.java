@@ -1,4 +1,4 @@
-package cn.edu.pku.wentl.bean;
+package com.example.wentianlin.myweather.bean;
 
 /**
  * Created by wentianlin on 2017/10/11.
