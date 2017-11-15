@@ -9,6 +9,7 @@ import android.os.Message;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,6 +34,7 @@ import com.example.wentianlin.myweather.util.NetUtil;
 public class MainActivity extends Activity implements View.OnClickListener{
     private static final int UPDATE_TODAY_WEATHER = 1;
     private ImageView mUpdateBtn;
+    private ProgressBar mProgressBar;
     private ImageView mCitySelect;
     //定义相关控件的对象
     private TextView cityTv, timeTv, humidityTv, weekTv, pmDataTv, pmQualityTv, temperatureTv, climateTv, windTv, city_name_Tv;
@@ -45,6 +47,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
 
         mUpdateBtn = (ImageView)findViewById(R.id.title_update_btn);
         mUpdateBtn.setOnClickListener(this);
+        mProgressBar = (ProgressBar)findViewById(R.id.title_update_progress);
 
         mCitySelect = (ImageView) findViewById(R.id.title_city_manager);
         mCitySelect.setOnClickListener(this);
@@ -59,7 +62,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
 
 
         initView();
-        this.onClick(findViewById(R.id.title_update_btn));
+        //this.onClick(findViewById(R.id.title_update_btn));
     }
 
     //控件点击响应函数
@@ -81,7 +84,10 @@ public class MainActivity extends Activity implements View.OnClickListener{
 
             if (NetUtil.getNetworkState(this) != NetUtil.NETWORN_NONE) {
                 Log.d("myWeather", "网络OK");
+                mUpdateBtn.setVisibility(View.INVISIBLE);
+                mProgressBar.setVisibility(View.VISIBLE);
                 queryWeatherCode(cityCode);
+
             }else{
                 Log.d("myWeather", "网络挂了");
                 Toast.makeText(MainActivity.this,"网络挂了！", Toast.LENGTH_LONG).show();
@@ -102,13 +108,8 @@ public class MainActivity extends Activity implements View.OnClickListener{
             editor.putString("main_city_code", newCityCode);
             editor.commit();
 
-            if (NetUtil.getNetworkState(this) != NetUtil.NETWORN_NONE) {
-                Log.d("myWeather", "网络OK");
-                queryWeatherCode(newCityCode);
-            }else{
-                Log.d("myWeather", "网络挂了");
-                Toast.makeText(MainActivity.this,"网络挂了！", Toast.LENGTH_LONG).show();
-            }
+            this.onClick(findViewById(R.id.title_update_btn));
+
         }
     }
 
@@ -287,6 +288,10 @@ public class MainActivity extends Activity implements View.OnClickListener{
 
     //更新UI中的控件
     void updateTodayWeather(TodayWeather todayWeather){
+        //更新progressBar的显示
+        mProgressBar.setVisibility(View.INVISIBLE);
+        mUpdateBtn.setVisibility(View.VISIBLE);
+        //更新天气显示控件
         city_name_Tv.setText(todayWeather.getCity()+"天气");
         cityTv.setText(todayWeather.getCity());
         timeTv.setText(todayWeather.getUpdatetime()+ "发布");

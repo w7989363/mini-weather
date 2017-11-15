@@ -10,11 +10,11 @@
         android:id="@+id/item_city_name"
         android:paddingLeft="10dp"
         android:textSize="20sp"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/white"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/item_city_code"
         android:textSize="20sp"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/white"/>
 </LinearLayout>
