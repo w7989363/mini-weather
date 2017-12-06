@@ -217,12 +217,13 @@
 
             <!--今日天气信息快信息块-->
             <RelativeLayout
+                android:id="@+id/today_weather"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/humidity"
-                android:layout_centerInParent="true"
-                android:layout_marginTop="5.0dip">
+                android:layout_centerInParent="false"
+                android:layout_marginTop="20.0dip">
                 <!--天气情况图片示例-->
                 <ImageView
                     android:id="@+id/weather_img"
@@ -282,9 +283,44 @@
             </RelativeLayout>
 
 
+            <android.support.v4.view.ViewPager
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/viewpager"
+                android:layout_below="@+id/today_weather"
+                android:layout_marginTop="15dp">
+
+            </android.support.v4.view.ViewPager>
+
+            <LinearLayout
+                android:id="@+id/indicatior"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_alignParentBottom="true">
+                <ImageView
+                    android:id="@+id/ind1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:src="@drawable/page_indicator_focused"/>
+                <ImageView
+                    android:id="@+id/ind2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:src="@drawable/page_indicator_unfocused"/>
+
+            </LinearLayout>
+
         </RelativeLayout>
 
+
+
     </LinearLayout>
+
+
 
 
 </RelativeLayout>

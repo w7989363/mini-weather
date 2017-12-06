@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center">
+
+    <LinearLayout
+        android:id="@+id/moreday3"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp">
+        <TextView
+            android:id="@+id/moreday3xingqi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="大后天"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:padding="2dp"/>
+        <ImageView
+            android:id="@+id/moreday3img"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/biz_plugin_weather_qing"
+            android:padding="2dp"/>
+        <TextView
+            android:id="@+id/moreday3temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5℃~4℃"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:padding="2dp"/>
+        <TextView
+            android:id="@+id/moreday3climate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="晴"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:padding="2dp"/>
+        <TextView
+            android:id="@+id/moreday3fengli"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="微风"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:padding="2dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/moreday4"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp">
+        <TextView
+            android:id="@+id/moreday4xingqi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="大大后天"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:padding="2dp"/>
+        <ImageView
+            android:id="@+id/moreday4img"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/biz_plugin_weather_qing"
+            android:padding="2dp"/>
+        <TextView
+            android:id="@+id/moreday4temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5℃~4℃"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:padding="2dp"/>
+        <TextView
+            android:id="@+id/moreday4climate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="晴"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:padding="2dp"/>
+        <TextView
+            android:id="@+id/moreday4fengli"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="微风"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:padding="2dp"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
