@@ -30,6 +30,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import com.example.wentianlin.myweather.app.MyApplication;
 import com.example.wentianlin.myweather.bean.TodayWeather;
 import com.example.wentianlin.myweather.util.NetUtil;
 /**
@@ -51,6 +52,9 @@ public class MainActivity extends Activity implements View.OnClickListener,ViewP
     private ImageView mUpdateBtn;
     private ProgressBar mProgressBar;
     private ViewPager vp;
+
+//    private LocationClient mLocationClient;
+//    private MyLocationListener mLocationListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -74,11 +78,27 @@ public class MainActivity extends Activity implements View.OnClickListener,ViewP
             Toast.makeText(MainActivity.this,"网络挂了！", Toast.LENGTH_LONG).show();
         }
 
+//        mLocationClient = ((MyApplication)getApplication()).mLocationClient;
+//        mLocationListener = new MyLocationListener();
+//        mLocationClient.registerLocationListener(mLocationListener);
+//        LocationClientOption option = new LocationClientOption();
+//        option.setIsNeedAddress(true);
+//        mLocationClient.setLocOption(option);
+//        mLocationClient.start();
 
         initView();
         //this.onClick(findViewById(R.id.title_update_btn));
 
     }
+
+//    @Override
+//    protected void onDestroy() {
+//        //取消注册的位置监听，以免内存泄露
+//        mLocationClient.unRegisterLocationListener(mLocationListener);
+//        // 退出时销毁定位
+//        mLocationClient.stop();
+//        super.onDestroy();
+//    }
 
     //控件点击响应函数
     @Override

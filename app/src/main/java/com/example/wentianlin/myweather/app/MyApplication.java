@@ -23,6 +23,7 @@ public class MyApplication extends Application{
     private static MyApplication mApplication;
     private CityDB mCityDB;
     private List<City> mCityList;
+    //public LocationClient mLocationClient;
     @Override
     public void onCreate() {
         super.onCreate();
@@ -30,6 +31,8 @@ public class MyApplication extends Application{
         mApplication = this;
         mCityDB = openCityDB();
         initCityList();
+
+        //mLocationClient = new LocationClient(this.getApplicationContext());
     }
 
     private void initCityList(){
